@@ -32,5 +32,15 @@ const primerToppingNaranja = document.querySelector('.topping.fondo-naranja')
 console.log(primerToppingNaranja)
 
 // Retorna una lista de nodos como un objeto que incluye todos los elementos que cumplen ese criterio
-const toppingsNaranja = document.querySelentorAll('.topping.fonfo-naranja')
+const toppingsNaranja = document.querySelectorAll('.topping.fonfo-naranja')
 console.log(toppingsNaranja)
+
+////  ESTILOS CON JS
+
+const primerTopping = document.querySelector('.topping')
+
+//Se pueden anadir usando la notacion de punto ya que el metodo devuelve un objeto y todos contaran con la propiedad style. Siempre se usa camelCase para escribir los estilos.
+
+primerTopping.style.backgroundColor = 'blue'
+primerTopping.style.color = '#6dff00'
+primerTopping.style.textTransform = 'uppercase'

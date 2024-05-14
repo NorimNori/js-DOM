@@ -42,5 +42,52 @@ const primerTopping = document.querySelector('.topping')
 //Se pueden anadir usando la notacion de punto ya que el metodo devuelve un objeto y todos contaran con la propiedad style. Siempre se usa camelCase para escribir los estilos.
 
 primerTopping.style.backgroundColor = 'blue'
-primerTopping.style.color = '#6dff00'
+// primerTopping.style.color = '#6dfa10'
 primerTopping.style.textTransform = 'uppercase'
+
+//Acceso al texto
+const listaDeToppings = document.getElementById('lista-toppings')
+//  Retorna una cadena de caracteres sin preservar la indentacion del aarchivo HTML
+console.log('> innerText')
+console.log(listaDeToppings.innerText)
+// Retorna una cadena de caracteres con la indentacion que tiene en archivo HTML
+console.log('> textContent')
+console.log(listaDeToppings.textContent)
+//Retorna toda la estructura HTML como una cadena de caracteres
+console.log('> innerHTML')
+console.log(listaDeToppings.innerHTML)
+
+//PARA MODIFICAR EL TEXTO QUE HAY EN LA PAGINA
+const titulo = document.getElementById('titulo')
+//Se selecciona el texto a modificar y se iguala a una string con el texto deseado
+titulo.innerText = 'Elige tu topping de pizza 🍕'
+
+//MODIFICAR ATRIBUTOS
+const enlaces = document.getElementsByTagName('a')
+// Como es una coleccion HTML se puede acceder por medio de si indice asi como verificar sus elementos usando el metodo getAttribute()
+
+//Para elimibar el atributo se uriliza el metodo removeAttribute()
+//Para asignarle o modificar un valor a un atributo en especifico se utiliza setAttribute()
+console.log(enlaces[0].getAttribute('href'))
+
+//Un ejemplo de actualizacion del atributo
+// ----->> console.log(enlaces[0].setAttribute('href', nuevo enlace))
+//Se escribe el nombre del atributo a modificar segido una coma y el nuevo valor que se desea colocar
+
+//CLASES HTML DESDE JS
+
+//Acceder a las classes del elemto, para acceder a una es especifico (en caso de haber mas de 1) se utiliza el indice y si se quiere toda la cadena se accede con el value.
+const primerTopping1 = document.querySelector('.topping')
+//para anadir una nueva clase
+primerTopping1.classList.add('nueva-clase')
+
+console.log(primerTopping1.classList)
+
+//Para verificar una clase, esto devuleve un booleano. Suele servir para las condicionales.
+console.log(primerTopping1.classList.contains('fondo-negro'))
+
+//Para eliminar una clase
+primerTopping1.classList.remove('nueva-clase')
+
+
+

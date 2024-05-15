@@ -89,5 +89,43 @@ console.log(primerTopping1.classList.contains('fondo-negro'))
 //Para eliminar una clase
 primerTopping1.classList.remove('nueva-clase')
 
+//CREAR Y ELEMINAR UN ELEMNTO DEL DOM
 
+//Primero se debe sellecionar el lugar donde se desea agregar el nuevo elemento para crear una referecia
+const listaDeToppings2 = document.getElementById('lista-toppings')
 
+//Se crea el elemento nuevo y se le dan estilos por medio de JS, el metodo add() puede anadir mas de una clase debiendo ser separadas por comillas y con el metrodo createElement() se crea el nuevo elemento.
+const toppingNuevo = document.createElement('li')
+toppingNuevo.classList.add('topping', 'fondo-marron')
+toppingNuevo.innerText = 'Queso Extra'
+
+//Con el metodo append() se agrega el elemento en el lugar deseado, este metodo sirve para elementos HTML como para texto, el metodo appendChild() tambien funciona pero solo para elementos HTML.
+listaDeToppings2.append(toppingNuevo)
+
+//PARA ELIMINAR ELEMENTOS
+toppingNuevo.remove()
+
+//RECORRER EL DOM
+
+//En el caso de los padres tenemos la propiedad parentElement o parentNode (incluye texto y comentarios), estos seleccionan el elemento padre del html seleccionado
+
+//Si se quiere ir mas aariba en el DOM se pueden encadenar las propiedades
+
+console.log(listaDeToppings.parentElement.parentElement.parentElement)
+
+//En el caso de los nodods hijos tenemos la propiedad children que devulve una collecion HTML, no accedemos a ellos directamente ya que se necesita el indice para poder manipularlos
+console.log(listaDeToppings.children)
+
+//Hay otra propiedad llanada firstChild, sin embargo tranaja con nodos por lo que normalmente retornaria text debido a que los espacios de indentacion tambien forman parte de los nodos del DOM; lo  mismo ocurre con lastChild
+
+//Para poder trabajaro unicamente con elementos HTML tenemos las firstElementChild y LastElementChild 
+
+console.log(listaDeToppings.firstElementChild)
+console.log(listaDeToppings.lastElementChild)
+
+//En cuanto a los elementos hermanos tenemos
+console.log(listaDeToppings.previousElementSibling)
+console.log(listaDeToppings.nextElementSibling)
+
+//Y para los nodos hermanos solo se omite la palabra element
+//Siempre verificar que exista el elemento y no devuelva null

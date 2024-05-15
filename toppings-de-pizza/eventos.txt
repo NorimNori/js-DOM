@@ -1,0 +1,19 @@
+EVENTO: "Algo" que ocurre en el sitio web como resultado de interaccion 
+con el ususario o por otra cause como cambios en el estadodel despositivo
+a de la ventana.
+
+Siempre se va a asociar en el codigo un tipo de eveneto con una funcion para decirle al navegador que cuando ocurra un evento especifico en un elemento especifico se va a llamar a una funcion especifica
+
+CONCEPTOS IMPORTANTES
+
+Elemento target (blanco u objetivo):
+Elemento que recibira ese evento al ser seleccionado, el cual dara la senal de interaccion parte del ususario 
+
+Trigger (desencadenar)
+Accion que va a desencadenar un evento un ejemplo es al dar click
+
+Event Handler
+Funcion que se ejecuta cuando ocurre un evento. Esta funcion manejara el evento cuando este ocurra
+
+Event Listener
+Crea la asociacion entre evento-elemento-funcion especificos mediante "escuchar" cuando el evento especifico ocurra

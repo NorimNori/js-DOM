@@ -129,3 +129,12 @@ console.log(listaDeToppings.nextElementSibling)
 
 //Y para los nodos hermanos solo se omite la palabra element
 //Siempre verificar que exista el elemento y no devuelva null
+
+//EVENTOS DEL DOM
+
+//Esta es la funcion que va a amenejar el evento, por lo que es el event handler. En caso de que haya mas atributos onClic() dentro del HTML que reproduzcan la misma funcion y se les quiera personalizar, se pueden utilizar parametros en la funcion
+function mostrarClic() {
+    console.log('Clic')
+}
+
+
